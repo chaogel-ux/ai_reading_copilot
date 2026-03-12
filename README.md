@@ -12,7 +12,7 @@
 
 ## 技术架构
 
-RAG Pipeline：
+RAG Pipeline；
 
 用户输入  
 ↓  
