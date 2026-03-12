@@ -19,12 +19,15 @@ style = st.selectbox(
     "选择书评风格",
     ["理性分析", "情绪表达", "幽默吐槽"]
 )
-
+length = st.selectbox(
+    "选择输出长度",
+    ["简短", "中等", "详细"]
+)
 if st.button("生成书评"):
     if user_input.strip():
         with st.spinner("正在生成书评，请稍等..."):
             results = pipeline.retriever.search(user_input, top_k=3)
-            result = pipeline.generate_review(user_input, style, book_title)
+            result = pipeline.generate_review(user_input, style, book_title, length)
 
         st.subheader("检索到的参考书评")
         for i, item in enumerate(results, 1):

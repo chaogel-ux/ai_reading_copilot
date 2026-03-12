@@ -5,7 +5,7 @@ class LLM:
 
     def __init__(self):
         self.client = ZhipuAI(
-            api_key="输入api"
+            api_key=""
         )
 
     def generate(self, prompt):
